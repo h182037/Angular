@@ -5,11 +5,18 @@
     Game name:
     <input #gameName />
   </label>
+    
+    <label>
+      Game description:
+      <input #gameDescription />
+    </label>
+ 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(gameName.value); gameName.value=''">
+  <button (click)="add(gameName.value, gameDescription.value); ">
     add
   </button>
 </div>
+
 
 <ul class="games">
   <li *ngFor="let game of games">
