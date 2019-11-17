@@ -53,6 +53,8 @@ export class GameService {
     );
   }
 
+ 
+
   /* GET Gamees whose name contains search term */
   searchGames(term: string): Observable<Game[]> {
     if (!term.trim()) {
