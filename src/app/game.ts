@@ -3,7 +3,4 @@ export class Game {
     name: string;
     description: string;
     ratings: number[];
-    score: number;
-    }
-
-
+}

@@ -15,19 +15,25 @@ import { GamesComponent }      from './games/games.component';
 import { GameSearchComponent }  from './game-search/game-search.component';
 import { MessagesComponent }    from './messages/messages.component';
 
+import {MatSliderModule} from '@angular/material/slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    MatSliderModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

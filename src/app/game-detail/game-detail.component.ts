@@ -12,7 +12,7 @@ import { GameService }  from '../game.service';
 })
 export class GameDetailComponent implements OnInit {
   @Input() game: Game;
-  score: number;
+
   constructor(
     private route: ActivatedRoute,
     private gameService: GameService,
@@ -26,9 +26,13 @@ export class GameDetailComponent implements OnInit {
   getGame(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.gameService.getGame(id)
-      .subscribe(game => this.game = game)
+      .subscribe(game => this.game = game);
+    
   }
 
+  rateGame(val: number): void{
+    this.game.ratings[this.game.ratings.length] = val;
+  }
 
   goBack(): void {
     this.location.back();
