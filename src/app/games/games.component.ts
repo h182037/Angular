@@ -22,10 +22,11 @@ export class GamesComponent implements OnInit {
     .subscribe(games => this.games = games);
   }
 
-  add(name: string): void {
+  add(name: string, description: string): void {
     name = name.trim();
+    description = description.trim();
     if (!name) { return; }
-    this.gameService.addGame({ name } as Game)
+    this.gameService.addGame({ name, description } as Game)
       .subscribe(game => {
         this.games.push(game);
       });
