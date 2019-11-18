@@ -42,7 +42,7 @@ export class GameDetailComponent implements OnInit {
     if(val != ""){
     this.game.comments[this.game.comments.length] = val;
     console.log(val);
-    this.gameService.updateGame(this.game)
+    this.gameService.updateGame(this.game).subscribe();
     }
   }
   goBack(): void {
