@@ -6,11 +6,28 @@ label {
   color: #607D8B;
   font-weight: bold;
 }
+.container{
+  padding-left: 40%;
+}
 
 input {
   height: 2em;
   font-size: 1em;
   padding-left: .4em;
+}
+.smalldiv{
+  border-bottom:rgb(35, 48, 54, 0.3);
+  width: 40%;
+  border-bottom-style: solid;
+  padding-bottom: 1%;
+  padding-top: 1%;
+
+}
+.comment{
+  margin: 20px;
+  padding: 20px;
+  background-color: #eee;
+  color: rgb(35, 48, 54);
 }
 
 button {

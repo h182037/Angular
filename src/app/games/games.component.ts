@@ -26,9 +26,10 @@ export class GamesComponent implements OnInit {
     name = name.trim();
     description = description.trim();
     if (!name) { return; }
-    var ratings = [];
-    var score = 0;
-    this.gameService.addGame({ name, description, ratings, score } as Game)
+    let ratings = [];
+    let score = 0;
+    let comments = [];
+    this.gameService.addGame({ name, description, ratings, score, comments} as Game)
       .subscribe(game => {
         this.games.push(game);
       });

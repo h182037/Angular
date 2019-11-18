@@ -27,7 +27,6 @@ export class GameDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.gameService.getGame(id)
       .subscribe(game => this.game = game);
-    
   }
 
   rateGame(val: number): void{
@@ -39,11 +38,16 @@ export class GameDetailComponent implements OnInit {
     this.game.score = sum/this.game.ratings.length;
     this.save();
   }
-
+  comment(val : string) : void {
+    if(val != ""){
+    this.game.comments[this.game.comments.length] = val;
+    console.log(val);
+    this.gameService.updateGame(this.game)
+    }
+  }
   goBack(): void {
     this.location.back();
   }
-
  save(): void {
     this.gameService.updateGame(this.game)
       .subscribe(() => this.goBack());
