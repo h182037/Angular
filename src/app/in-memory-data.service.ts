@@ -17,7 +17,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 17, name: 'Death Stranding', description: "Walking simulator",ratings: [1, 4, 5, 5, 5, 4, 3], score: 0},
       { id: 18, name: 'Monster Hunter World', description: "Japaneese dragons",ratings: [3, 3, 3, 4, 5], score: 0},
       { id: 19, name: 'World of Warcraft',description: "Virginity and mountain dew",ratings: [4, 4, 5, 5, 5, 2, 2, 2], score: 0},
-      { id: 20, name: 'Fårtnait' , description: "Screaming children",ratings: [4, 4, 5, 5, 5, 5, 1, 1], score: 0},
+      { id: 20, name: 'Overwatch' , description: "Pew Pew Pew",ratings: [4, 4, 5, 5, 5, 5, 1, 1], score: 0, url: "assets/overwatch.jpg"},
       { id: 21, name: 'Conkers Bad Fur day', description: "Drunk squirrel", ratings: [4, 5, 5, 5, 5], score: 0},
       { id: 22, name: 'League of Legends', description: "4 buttons is all you need",ratings: [4, 4, 5, 3, 3], score: 0}
     ];
