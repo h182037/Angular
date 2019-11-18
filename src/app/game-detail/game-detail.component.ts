@@ -32,6 +32,12 @@ export class GameDetailComponent implements OnInit {
 
   rateGame(val: number): void{
     this.game.ratings[this.game.ratings.length] = val;
+    var sum = 0;
+    this.game.ratings.forEach(number =>{
+      sum += number;
+    });
+    this.game.score = sum/this.game.ratings.length;
+    this.save();
   }
 
   goBack(): void {

@@ -3,4 +3,9 @@ export class Game {
     name: string;
     description: string;
     ratings: number[];
+    score: number;
+}
+
+function toString(): string{
+    return this.score;
 }

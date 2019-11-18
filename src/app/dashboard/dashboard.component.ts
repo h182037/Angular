@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   getGames(): void {
     this.gameService.getGames()
-      .subscribe(games => this.games = games.slice(1, 5));
+      .subscribe(games => this.games = games.sort((a, b) => a.score < b.score ? 1 : a.score > b.score ? -1 : 0).splice(0,12));
   }
 }
 
